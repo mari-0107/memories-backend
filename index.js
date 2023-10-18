@@ -24,3 +24,17 @@ mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnified
 .then(() => app.listen(PORT, ()=> console.log(`running on ${PORT}`))).catch((error)=> console.log(error.message))
 
 // mongoose.set('useFindAndModify', false)
+
+
+
+// {
+//     "version": 2,
+//     "builds": [{
+//         "src": "./index.js",
+//         "use": "@vercel/node"
+//     }],
+//     "routes": [{
+//         "src": "/(.*)",
+//         "dest": "/"
+//     }]
+// }
