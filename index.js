@@ -27,14 +27,3 @@ mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: tr
 
 
 
-// {
-//     "version": 2,
-//     "builds": [{
-//         "src": "./index.js",
-//         "use": "@vercel/node"
-//     }],
-//     "routes": [{
-//         "src": "/(.*)",
-//         "dest": "/"
-//     }]
-// }
