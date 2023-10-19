@@ -17,13 +17,13 @@ app.use("/posts", PostsRoutes)
 
 app.get("/", (req, res) => {res.send("Hello to API")})
 
-// const CONNECTION_URL = 'mongodb+srv://Maria:Maria123@cluster0.y9los7j.mongodb.net/?retryWrites=true&w=majority'
+const CONNECTION_URL = 'mongodb+srv://Maria:Maria123@cluster0.y9los7j.mongodb.net/?retryWrites=true&w=majority'
 const PORT = process.env.PORT || 5000;
 
-mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true})
 .then(() => app.listen(PORT, ()=> console.log(`running on ${PORT}`))).catch((error)=> console.log(error.message))
 
-// mongoose.set('useFindAndModify', false)
+mongoose.set('useFindAndModify', false)
 
 
 
